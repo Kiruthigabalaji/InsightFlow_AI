@@ -1,0 +1,26 @@
+# InsightFlow AI — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Web framework ──────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+
+# ── Data collection ────────────────────────────────────────────────────────
+requests==2.32.3
+beautifulsoup4==4.12.3
+playwright==1.49.1          # JLL scraper (run: playwright install chromium)
+pandas==2.2.3
+openpyxl==3.1.5             # Excel support for CRE lending dataset
+
+# ── LLM ────────────────────────────────────────────────────────────────────
+google-generativeai==0.8.3      # Gemini API — free tier at aistudio.google.com
+
+# ── Data validation / schema ───────────────────────────────────────────────
+pydantic==2.10.3
+
+# ── BigQuery (optional — pipeline runs without it) ────────────────────────
+google-cloud-bigquery==3.27.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+python-dotenv==1.0.1        # Load .env in development
+httpx==0.28.0               # Async HTTP (used by FastAPI test client)
